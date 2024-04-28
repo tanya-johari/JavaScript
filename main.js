@@ -25,6 +25,12 @@ function myReduce(arr, callback) {
     return accumulator;
 }
 
+function myForEach(arr, callback) {
+    for (let i = 0; i < arr.length; i++) {
+        callback(arr[i]);
+    }
+}
+
 
 //Example usage
 const numbers = [1,2,3,4,5];
@@ -44,3 +50,8 @@ console.log("Filtered array:", evenNumbers);
 const sum = myReduce(numbers, 
 (accumulator, current) => accumulator + current);
 console.log("Reduced array:", sum);
+
+//ForEach: print each number
+console.log("ForEach:");
+myForEach(numbers, 
+(num) => console.log(num));
