@@ -17,6 +17,15 @@ function myFilter(arr, callback) {
     return filteredArray;
 }
 
+function myReduce(arr, callback) {
+    let accumulator = arr[0];
+    for (let i = 1; i < arr.length; i++) {
+        accumulator = callback(accumulator, arr[i]);
+    }
+    return accumulator;
+}
+
+
 //Example usage
 const numbers = [1,2,3,4,5];
 console.log(numbers);
@@ -30,3 +39,8 @@ console.log("Mapped array:", doubledNumbers);
 const evenNumbers = myFilter(numbers, 
 (num) => num % 2 == 0);
 console.log("Filtered array:", evenNumbers);
+
+//Reduce: sum of all numbers
+const sum = myReduce(numbers, 
+(accumulator, current) => accumulator + current);
+console.log("Reduced array:", sum);
