@@ -1,8 +1,8 @@
 // Importing functions from separate files
-import { myMap } from './myMap.js';
-import { myFilter } from './myFilter.js';
-import { myReduce } from './myReduce.js';
-import { myForEach } from './myForEach.js';
+import { myMap } from './myFunctions/myMap.js';
+import { myFilter } from './myFunctions/myFilter.js';
+import { myReduce } from './myFunctions/myReduce.js';
+import { myForEach } from './myFunctions/myForEach.js';
 
 // Example usage with complex data
 const students = [
